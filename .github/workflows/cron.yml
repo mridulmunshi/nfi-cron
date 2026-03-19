@@ -1,0 +1,14 @@
+name: NFI Cron Job
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Import
+        run: |
+          curl -s "https://www.news69.liveblog365.com/?nfi_run=1&nfi_key=nfi123"
