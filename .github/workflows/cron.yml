@@ -11,4 +11,6 @@ jobs:
     steps:
       - name: Run Import
         run: |
-          curl -sk "https://www.news69.liveblog365.com/?nfi_run=1&nfi_key=nfi123"
+          curl -sk --max-time 30 --retry 3 \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0" \
+            "https://www.news69.liveblog365.com/?nfi_run=1&nfi_key=nfi123" || true
