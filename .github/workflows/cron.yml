@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Run Import
         run: |
-          curl -s "https://www.news69.liveblog365.com/?nfi_run=1&nfi_key=nfi123"
+          curl -sk "https://www.news69.liveblog365.com/?nfi_run=1&nfi_key=nfi123"
